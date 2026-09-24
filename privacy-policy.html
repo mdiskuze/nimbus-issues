@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nimbus - Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 80px;
+    line-height: 1.55;
+    color: #1c1c1e;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e5e5ea; background: #111113; }
+    a { color: #6ea8ff; }
+    code { background: #222; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.2em; }
+  h2 { font-size: 1.15rem; margin-top: 2em; }
+  .updated { color: #888; font-size: 0.9rem; margin-bottom: 2em; }
+  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
+  th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid rgba(128,128,128,0.3); vertical-align: top; }
+  th { font-weight: 600; }
+  code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; font-size: 0.92em; }
+  ul { padding-left: 1.3em; }
+</style>
+</head>
+<body>
+
+<h1>Nimbus - Privacy Policy</h1>
+<p class="updated">Last updated: 2026-09-24</p>
+
+<p>
+Nimbus is a hyper-local weather app for a small area on the Swedish coast. It has no account
+system, no backend server of its own, no advertising, and no analytics or crash-reporting SDK.
+This page explains the only two things that leave your device: where you are, and which weather
+service that location is sent to.
+</p>
+
+<h2>Location</h2>
+<p>
+If you grant Nimbus the location permission, or search for and save a place, the app sends that
+place's coordinates (latitude and longitude) to one or more of the weather services listed below,
+so they can answer with a forecast for that spot. Nimbus does not run a server, so nobody but you
+and that weather service ever sees the request - there is no third party in between collecting or
+reselling it, and no location history is kept anywhere except on your own device, for your own
+saved places.
+</p>
+
+<h2>Who Nimbus talks to</h2>
+<p>
+Every request below carries only the coordinates needed to answer it (and, for MET Norway, an
+identifying app version and contact address, which is that service's own requirement for anyone
+using it). None of them receive a name, an account identifier, or any other data about you,
+because Nimbus has none to send.
+</p>
+<table>
+  <tr><th>Service</th><th>What it is asked for</th><th>Their own policy</th></tr>
+  <tr><td>MET Norway (Norwegian Meteorological Institute)</td><td>Forecast, radar nowcast, sunrise/sunset for your place</td><td><a href="https://api.met.no/doc/TermsOfService">api.met.no terms</a></td></tr>
+  <tr><td>Open-Meteo</td><td>Forecast model data, place search</td><td><a href="https://open-meteo.com/en/terms">open-meteo.com terms</a></td></tr>
+  <tr><td>SMHI (Swedish Meteorological and Hydrological Institute)</td><td>Radar imagery, weather warnings, station observations</td><td><a href="https://www.smhi.se/en/about-smhi/other-languages/english-en/legal-information">smhi.se legal information</a></td></tr>
+  <tr><td>NOAA Space Weather Prediction Center</td><td>Aurora forecast data</td><td><a href="https://www.noaa.gov/protecting-your-privacy">noaa.gov privacy policy</a></td></tr>
+  <tr><td>RainViewer</td><td>Radar cross-check (used occasionally, not for the main forecast)</td><td><a href="https://www.rainviewer.com/privacy.html">rainviewer.com privacy policy</a></td></tr>
+  <tr><td>OpenStreetMap (Nominatim, tile.openstreetmap.org)</td><td>Map tiles, and turning a map tap into a place name</td><td><a href="https://osmfoundation.org/wiki/Privacy_Policy">OSM Foundation privacy policy</a></td></tr>
+  <tr><td>MapTiler</td><td>Map tiles, only when the app is built with a MapTiler key configured</td><td><a href="https://www.maptiler.com/privacy-policy/">maptiler.com privacy policy</a></td></tr>
+</table>
+
+<h2>What stays on your device</h2>
+<p>
+Saved places, cached forecasts and radar frames, and your app settings are stored locally in the
+app's own database, so Nimbus can show something even when it cannot reach a network. None of it
+is uploaded anywhere. Uninstalling the app removes it.
+</p>
+
+<h2>Notifications</h2>
+<p>
+Rain, wind and weather-warning alerts, and the morning brief, are calculated on your device from
+the same forecast data and shown as a local notification. Nothing about a notification being shown,
+opened or dismissed is sent anywhere.
+</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><b>Location (coarse/fine)</b> - to fetch the forecast for where you are, if you choose to use
+  that instead of a saved place. Optional; the app works entirely from saved places without it.</li>
+  <li><b>Notifications</b> - for rain, wind, warning and brief alerts. Can be turned off in the
+  app's own settings or in Android's notification settings.</li>
+  <li><b>Exact alarm / ignore battery optimisations</b> - so the morning brief and background
+  refresh fire on time on phones that otherwise defer them.</li>
+  <li><b>Install unknown apps</b> - only in the version distributed outside Google Play (see
+  below); not present in the Play Store build.</li>
+</ul>
+
+<h2>Updates, depending on where you got the app</h2>
+<p>
+The version installed from Google Play updates only through Google Play, the same as any other
+Play app. A version installed directly from
+<a href="https://github.com/mdiskuze/nimbus-issues/releases">GitHub</a> instead checks that same
+public page for a newer release; that check reads a public GitHub URL and downloads nothing but
+the APK file itself.
+</p>
+
+<h2>Children</h2>
+<p>
+Nimbus is a general-audience weather app, not directed at children, and collects no data that
+would identify or track anyone, of any age.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+If what the app does changes, this page will change with it before that version is released. The
+date at the top is the last time it was edited.
+</p>
+
+<h2>Contact</h2>
+<p>
+Questions about this policy or the app: <a href="mailto:mdiskuze@gmail.com">mdiskuze@gmail.com</a>,
+or open an issue on <a href="https://github.com/mdiskuze/nimbus-issues/issues">GitHub</a>.
+</p>
+
+</body>
+</html>
