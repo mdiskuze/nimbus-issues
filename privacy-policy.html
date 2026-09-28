@@ -33,10 +33,10 @@
 <body>
 
 <h1>Nimbus - Privacy Policy</h1>
-<p class="updated">Last updated: 2026-09-24</p>
+<p class="updated">Last updated: 2026-09-28</p>
 
 <p>
-Nimbus is a hyper-local weather app for a small area on the Swedish coast. It has no account
+Nimbus is a hyper-local weather app for the Nordic countries, the Czech Republic and Germany. It has no account
 system, no backend server of its own, no advertising, and no analytics or crash-reporting SDK.
 This page explains the only two things that leave your device: where you are, and which weather
 service that location is sent to.
@@ -54,9 +54,11 @@ saved places.
 
 <h2>Who Nimbus talks to</h2>
 <p>
-Every request below carries only the coordinates needed to answer it (and, for MET Norway, an
+Every request below carries at most the coordinates needed to answer it (and, for MET Norway, an
 identifying app version and contact address, which is that service's own requirement for anyone
-using it). None of them receive a name, an account identifier, or any other data about you,
+using it). Some carry no coordinates at all: where a service publishes one file for a whole
+country, the app downloads that file and finds your place in it on your device.
+None of them receive a name, an account identifier, or any other data about you,
 because Nimbus has none to send.
 </p>
 <table>
@@ -67,6 +69,9 @@ because Nimbus has none to send.
   <tr><td>NOAA Space Weather Prediction Center</td><td>Aurora forecast data</td><td><a href="https://www.noaa.gov/protecting-your-privacy">noaa.gov privacy policy</a></td></tr>
   <tr><td>RainViewer</td><td>Radar cross-check (used occasionally, not for the main forecast)</td><td><a href="https://www.rainviewer.com/privacy.html">rainviewer.com privacy policy</a></td></tr>
   <tr><td>OpenStreetMap (Nominatim, tile.openstreetmap.org)</td><td>Map tiles, and turning a map tap into a place name</td><td><a href="https://osmfoundation.org/wiki/Privacy_Policy">OSM Foundation privacy policy</a></td></tr>
+  <tr><td>CHMI (Czech Hydrometeorological Institute)</td><td>Radar imagery and radar nowcast for the Czech Republic, downloaded whole, without your coordinates</td><td><a href="https://www.chmi.cz/o-chmu/povinne-zverejnovane-informace-chmu">chmi.cz, published information incl. GDPR</a></td></tr>
+  <tr><td>DWD (Deutscher Wetterdienst)</td><td>Radar imagery and radar nowcast for Germany. The nowcast for your place is asked for with its coordinates, and the radar history with the edges of the map area on your screen. The nowcast maps are downloaded whole</td><td><a href="https://www.dwd.de/EN/service/dataprotection/dataprotection_node.html">dwd.de data protection</a></td></tr>
+  <tr><td>MeteoAlarm (EUMETNET)</td><td>Official weather warnings for the Czech Republic and Germany, downloaded per country, without your coordinates</td><td><a href="https://meteoalarm.org/">meteoalarm.org</a></td></tr>
   <tr><td>MapTiler</td><td>Map tiles, only when the app is built with a MapTiler key configured</td><td><a href="https://www.maptiler.com/privacy-policy/">maptiler.com privacy policy</a></td></tr>
 </table>
 
